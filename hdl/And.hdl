@@ -1,0 +1,9 @@
+CHIP A6Q2201890722 {
+    IN a, b, c, d;
+    OUT f;
+
+    PARTS:
+    AND(a=a, b=d, out=x);     // a AND d
+    AND(a=b, b=c, out=y);     // b AND c
+    OR(a=x, b=y, out=f);      // (a AND d) OR (b AND c)
+}
